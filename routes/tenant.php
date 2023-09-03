@@ -26,7 +26,9 @@ Route::middleware(['web',InitializeTenancyByDomain::class,PreventAccessFromCentr
     });
 
     Route::get('/user', function () {
-        return 'Hola , aca deberias ver a los usuarios';
+        // return 'Hola , aca deberias ver a los usuarios';
+        $user = User::All();
+        dd($user);
     });
 
 });
